@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio landing page for Jan Christian L.">
+  <title>Jan Christian L. | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Jan Christian L. home">
+        <span class="brand-mark">JC</span>
+        <span>Jan Christian</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" data-nav-links>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Personal Portfolio</p>
+          <h1>Hi, I'm Jan Christian</h1>
+          <p class="hero-lede">Creative web designer and digital problem-solver focused on building modern, responsive, and user-friendly web experiences.</p>
+          <p class="hero-text">LinkedIn details were not accessible during setup, so this landing page is structured with clean placeholder copy for Jan Christian's headline, summary, experience, skills, projects, certifications, and contact links.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View My Work</a>
+            <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          </div>
+          <div class="hero-stats" aria-label="Professional highlights">
+            <div>
+              <strong>5+</strong>
+              <span>Skill Areas</span>
+            </div>
+            <div>
+              <strong>360</strong>
+              <span>Digital Focus</span>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <span>Responsive</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Profile image and creative coding graphics">
+          <div class="shape shape-a"></div>
+          <div class="shape shape-b"></div>
+          <div class="profile-frame">
+            <img src="assets/headshot.jpg" alt="Headshot of Jan Christian L." onerror="this.classList.add('is-hidden'); this.nextElementSibling.classList.add('is-visible');">
+            <div class="profile-fallback" aria-hidden="true">JC</div>
+          </div>
+          <div class="code-chip chip-one">&lt;design /&gt;</div>
+          <div class="code-chip chip-two">UI + UX</div>
+          <div class="code-card">
+            <span class="dot dot-blue"></span>
+            <span class="dot dot-pink"></span>
+            <span class="dot dot-lime"></span>
+            <pre>const portfolio = {
+  style: "modern",
+  focus: "impact"
+};</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">About</p>
+        <h2>Purposeful design, practical delivery.</h2>
+      </div>
+      <div class="about-layout">
+        <article class="about-card reveal">
+          <h3>Professional Summary</h3>
+          <p>Replace this section with Jan Christian's LinkedIn About summary. The current copy presents him as a modern web and digital solutions professional with strengths across design, front-end execution, collaboration, and user-focused delivery.</p>
+          <p>Use this space to highlight years of experience, industries served, certifications, notable achievements, and the type of work Jan Christian wants to attract next.</p>
+        </article>
+        <div class="about-panel reveal">
+          <span>Available for</span>
+          <strong>Portfolio work, digital projects, and creative web builds</strong>
+          <a href="https://www.linkedin.com/in/jan-christian-l-585672aa/" target="_blank" rel="noreferrer">LinkedIn Profile</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Skills</p>
+        <h2>Bento-style capabilities built for modern web work.</h2>
+      </div>
+      <div class="bento-grid">
+        <article class="bento-card bento-large reveal">
+          <span class="card-icon">WD</span>
+          <h3>Web Design</h3>
+          <p>Landing pages, visual systems, responsive layouts, and polished digital presentation.</p>
+        </article>
+        <article class="bento-card reveal">
+          <span class="card-icon">FE</span>
+          <h3>Frontend Development</h3>
+          <p>Semantic HTML, modern CSS, lightweight JavaScript, and accessible interactions.</p>
+        </article>
+        <article class="bento-card reveal">
+          <span class="card-icon">UX</span>
+          <h3>UI/UX</h3>
+          <p>Clear user journeys, readable interfaces, wireframes, and conversion-focused structure.</p>
+        </article>
+        <article class="bento-card reveal">
+          <span class="card-icon">PM</span>
+          <h3>Project Coordination</h3>
+          <p>Organized delivery, stakeholder communication, planning, and quality follow-through.</p>
+        </article>
+        <article class="bento-card bento-wide reveal">
+          <span class="card-icon">TL</span>
+          <h3>Tools & Workflow</h3>
+          <p>Replace with LinkedIn tools such as design platforms, CMS tools, analytics, productivity systems, and development workflows.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Featured Work</p>
+        <h2>Interactive highlights carousel.</h2>
+      </div>
+      <div class="carousel reveal" aria-roledescription="carousel" aria-label="Portfolio highlights">
+        <div class="carousel-track" data-carousel-track>
+          <article class="slide is-active" aria-label="Slide 1 of 3">
+            <div>
+              <span class="slide-tag">Portfolio Build</span>
+              <h3>Personal Brand Landing Page</h3>
+              <p>A bold responsive portfolio concept with dark hero styling, neon accents, bento sections, and clean calls to action.</p>
+            </div>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS Grid</li>
+              <li>JavaScript</li>
+            </ul>
+            <a href="#contact">Discuss a similar project</a>
+          </article>
+          <article class="slide" aria-label="Slide 2 of 3">
+            <div>
+              <span class="slide-tag">Service Highlight</span>
+              <h3>Responsive Website Refresh</h3>
+              <p>Modernize an existing site with clearer navigation, stronger visual hierarchy, mobile polish, and accessible components.</p>
+            </div>
+            <ul>
+              <li>UI Audit</li>
+              <li>Responsive CSS</li>
+              <li>Performance</li>
+            </ul>
+            <a href="#services">Explore services</a>
+          </article>
+          <article class="slide" aria-label="Slide 3 of 3">
+            <div>
+              <span class="slide-tag">Professional Impact</span>
+              <h3>Digital Workflow Support</h3>
+              <p>Support teams with practical web, design, and technical solutions that make digital work easier to maintain.</p>
+            </div>
+            <ul>
+              <li>Documentation</li>
+              <li>Tools</li>
+              <li>Support</li>
+            </ul>
+            <a href="#experience">View experience</a>
+          </article>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" type="button" data-carousel-prev aria-label="Previous slide">Prev</button>
+          <div class="carousel-dots" data-carousel-dots aria-label="Carousel pagination"></div>
+          <button class="carousel-btn" type="button" data-carousel-next aria-label="Next slide">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Experience</p>
+        <h2>Replace-ready career timeline.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <span class="timeline-date">Recent Role</span>
+          <div>
+            <h3>LinkedIn Role Placeholder</h3>
+            <p class="company">Company Name | Dates</p>
+            <p>Add Jan Christian's current or most recent role, company, dates, and achievement-focused bullets from LinkedIn.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-date">Previous Role</span>
+          <div>
+            <h3>Digital / Web / Support Role</h3>
+            <p class="company">Company Name | Dates</p>
+            <p>Use this entry for responsibilities, projects, tools, and measurable outcomes from his work history.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-date">Earlier Work</span>
+          <div>
+            <h3>Foundation Experience</h3>
+            <p class="company">Company Name | Dates</p>
+            <p>Highlight early career strengths, certifications, training, and client-facing or technical experience.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Services</p>
+        <h2>What I do.</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <h3>Web Design</h3>
+          <p>Modern landing pages and website layouts with strong visual identity.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Frontend Development</h3>
+          <p>Clean static pages, responsive components, and interactive UI details.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>UI/UX Design</h3>
+          <p>Readable flows, conversion-minded sections, and intuitive user journeys.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Digital Solutions</h3>
+          <p>Practical support for websites, tools, content updates, and technical workflows.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-card reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build something sharp, useful, and memorable.</h2>
+        <p>Replace the email placeholder below with Jan Christian's preferred contact address. LinkedIn is included as the verified source link supplied for this build.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/jan-christian-l-585672aa/" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+          <a class="btn btn-secondary" href="mailto:hello@example.com">hello@example.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span data-year></span> Jan Christian L. Built for a modern personal portfolio.</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
