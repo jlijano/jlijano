@@ -73,6 +73,18 @@ document.addEventListener("keydown", (event) => {
 
 updateCarousel(0);
 
+document.querySelectorAll(".timeline-toggle").forEach((toggle) => {
+  const card = toggle.closest(".timeline-card");
+  const details = card?.querySelector(".timeline-details");
+
+  if (!card || !details) return;
+
+  toggle.addEventListener("click", () => {
+    const isOpen = card.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+});
+
 const revealElements = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window) {
