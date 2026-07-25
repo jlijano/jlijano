@@ -25,6 +25,50 @@
     'Figma': 'https://cdn.simpleicons.org/figma/F24E1E'
   };
 
+  const createToolCard = (markText, name, description) => {
+    const card = document.createElement('article');
+    card.className = 'tool-card';
+
+    const mark = document.createElement('span');
+    mark.className = 'tool-mark';
+    mark.textContent = markText;
+
+    const content = document.createElement('div');
+    const title = document.createElement('strong');
+    title.textContent = name;
+    const breakElement = document.createElement('br');
+    const detail = document.createElement('span');
+    detail.textContent = description;
+
+    content.append(title, breakElement, detail);
+    card.append(mark, content);
+    return card;
+  };
+
+  [...toolsGrid.querySelectorAll('.tool-card')].forEach((card) => {
+    const title = card.querySelector('strong');
+    const name = title?.textContent?.trim();
+
+    if (name === 'Jira') {
+      const mark = card.querySelector('.tool-mark');
+      const detail = card.querySelector('div span');
+      if (mark) mark.textContent = 'RW';
+      if (title) title.textContent = 'Rework.com';
+      if (detail) detail.textContent = 'Workflow management';
+    }
+
+    if (name === 'GLPI') card.remove();
+
+    if (name === 'Generative AI Tools') {
+      card.replaceWith(
+        createToolCard('CX', 'Codex', 'AI-assisted development'),
+        createToolCard('CL', 'Claude', 'AI research and analysis'),
+        createToolCard('GPT', 'ChatGPT', 'AI productivity and automation'),
+        createToolCard('H', 'Hermes', 'AI agent workflows')
+      );
+    }
+  });
+
   toolsGrid.classList.remove('tools-grid');
   toolsGrid.classList.add('tools-slider');
   toolsGrid.setAttribute('tabindex', '0');
