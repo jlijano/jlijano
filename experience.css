@@ -17,6 +17,8 @@
 .experience-skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
 .experience-skills span{padding:7px 11px;border:1px solid rgba(147,70,255,.24);border-radius:999px;background:rgba(147,70,255,.08);color:#c8b1ff;font-size:.75rem;font-weight:700}
 .experience-actions{display:flex;justify-content:center;margin-top:34px}
+.experience-actions .outline-button{background:var(--gradient);border-color:transparent;color:#fff;box-shadow:0 12px 30px rgba(91,76,255,.28)}
+.experience-actions .outline-button:hover{color:#fff;border-color:transparent;box-shadow:0 16px 38px rgba(91,76,255,.38)}
 .experience-item.is-hidden{display:none}
 .credentials-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
 .credential-card{padding:20px;border:1px solid var(--border-soft);border-radius:16px;background:rgba(16,28,55,.7)}
