@@ -99,3 +99,12 @@
   originalCards.forEach((card) => track.appendChild(prepareCard(card.cloneNode(true), true)));
   toolsGrid.replaceChildren(track);
 })();
+
+(() => {
+  if (document.querySelector('script[data-clients-carousel-module]')) return;
+  const script = document.createElement('script');
+  script.src = 'clients-carousel.js';
+  script.defer = true;
+  script.dataset.clientsCarouselModule = 'true';
+  document.head.appendChild(script);
+})();
