@@ -26,6 +26,72 @@
   <link rel="stylesheet" href="hero-final.css">
   <link rel="stylesheet" href="portrait-fix.css">
   <link rel="stylesheet" href="hero-portrait-position.css">
+  <style>
+    .social-links .linkedin-link {
+      position: relative;
+      display: inline-grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.035);
+      color: #f7f9ff;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+    .social-links .linkedin-link svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+    .social-links .linkedin-link::after {
+      content: "View LinkedIn?";
+      position: absolute;
+      left: calc(100% + 12px);
+      top: 50%;
+      transform: translateY(-50%) translateX(-6px);
+      padding: 8px 11px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 9px;
+      background: #101c37;
+      color: #f7f9ff;
+      font-size: .78rem;
+      font-weight: 700;
+      line-height: 1;
+      white-space: nowrap;
+      box-shadow: 0 12px 28px rgba(0,0,0,.28);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+      z-index: 20;
+    }
+    .social-links .linkedin-link:hover,
+    .social-links .linkedin-link:focus-visible {
+      transform: translateY(-3px);
+      border-color: #9346ff;
+      background: linear-gradient(135deg, rgba(147,70,255,.28), rgba(41,125,255,.22));
+      box-shadow: 0 12px 28px rgba(91,76,255,.24);
+      color: #fff;
+    }
+    .social-links .linkedin-link:hover::after,
+    .social-links .linkedin-link:focus-visible::after {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-50%) translateX(0);
+    }
+    @media (max-width: 520px) {
+      .social-links .linkedin-link::after {
+        left: 0;
+        top: calc(100% + 10px);
+        transform: translateY(-4px);
+      }
+      .social-links .linkedin-link:hover::after,
+      .social-links .linkedin-link:focus-visible::after {
+        transform: translateY(0);
+      }
+    }
+  </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jan Lijano","jobTitle":"IT Project and Service Delivery Manager","url":"https://jlijano.github.io/jlijano/","image":"assets/headshot-portrait.svg","sameAs":["https://github.com/jlijano","https://www.linkedin.com/in/jan-christian-l-585672aa/"]}</script>
 </head>
 <body>
@@ -42,7 +108,7 @@
   <main id="main-content">
     <section class="hero" id="home" aria-labelledby="hero-title">
       <div class="container hero-grid">
-        <div class="hero-copy reveal"><p class="eyebrow">Hi, I’m</p><h1 id="hero-title">Jan Lijano</h1><p class="hero-role">IT Project &amp; <span>Service Delivery Leader</span></p><p class="hero-description">I lead technology projects, service operations, Microsoft 365 implementations, IT asset programmes, and digital transformation initiatives that improve efficiency, governance, and customer outcomes.</p><div class="hero-actions"><a class="button" href="#experience">View My Experience</a><a class="text-link" href="assets/documents/cv.html">Download CV <span aria-hidden="true">↗</span></a></div><div class="social-links" aria-label="Social links"><a href="https://www.linkedin.com/in/jan-christian-l-585672aa/" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a></div></div>
+        <div class="hero-copy reveal"><p class="eyebrow">Hi, I’m</p><h1 id="hero-title">Jan Lijano</h1><p class="hero-role">IT Project &amp; <span>Service Delivery Leader</span></p><p class="hero-description">I lead technology projects, service operations, Microsoft 365 implementations, IT asset programmes, and digital transformation initiatives that improve efficiency, governance, and customer outcomes.</p><div class="hero-actions"><a class="button" href="#experience">View My Experience</a><a class="text-link" href="assets/documents/cv.html">Download CV <span aria-hidden="true">↗</span></a></div><div class="social-links" aria-label="Social links"><a class="linkedin-link" href="https://www.linkedin.com/in/jan-christian-l-585672aa/" target="_blank" rel="noopener noreferrer" aria-label="View Jan Lijano on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.41a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.1 20.45H3.54V8.98H7.1v11.47Z"/></svg></a></div></div>
         <div class="hero-visual reveal"><div class="portrait-orbit" aria-hidden="true"></div><div class="shape cube-one" aria-hidden="true"></div><div class="shape cube-two" aria-hidden="true"></div><div class="shape sphere-one" aria-hidden="true"></div><div class="portrait-wrap"><img src="assets/headshot-portrait.svg" width="720" height="860" alt="Portrait of Jan Lijano" fetchpriority="high"></div><div class="experience-card"><strong>13+</strong><span>Years of<br>IT Experience</span></div></div>
       </div>
     </section>
