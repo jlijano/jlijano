@@ -61,12 +61,14 @@ if (projectCarousel) {
 
   const secureLoginProject = document.createElement("article");
   secureLoginProject.className = "project-carousel__item";
-  secureLoginProject.style.backgroundImage = "linear-gradient(100deg,rgba(5,15,35,.9),rgba(10,26,56,.48)),url('assets/custom-secure-login.svg')";
+  secureLoginProject.style.backgroundImage = "url('assets/custom-secure-login.svg')";
   secureLoginProject.style.backgroundSize = "cover";
   secureLoginProject.style.backgroundPosition = "center";
+  secureLoginProject.style.backgroundRepeat = "no-repeat";
+  secureLoginProject.style.backgroundColor = "#f7f9fc";
   secureLoginProject.setAttribute("aria-label", "Custom secure login system project");
   secureLoginProject.innerHTML = `
-    <div class="project-carousel__content">
+    <div class="project-carousel__content" style="max-width:590px;padding:28px 30px;border:1px solid rgba(255,255,255,.16);border-radius:18px;background:rgba(5,15,35,.88);box-shadow:0 18px 45px rgba(0,0,0,.34);backdrop-filter:blur(8px)">
       <p class="project-carousel__eyebrow">Secure client portal</p>
       <h3 class="project-carousel__title">Custom Secure Login System</h3>
       <p class="project-carousel__description">A branded, responsive authentication experience built for private client workspaces, controlled account access, and secure organisation-managed sign-in.</p>
