@@ -13,7 +13,7 @@
     'Power Platform': svg('<path d="M10 22 27 8l17 14-17 14z" fill="#742774"/><path d="M20 42 37 28l17 14-17 14z" fill="#4f6bed"/><path d="m27 36 10-8 10 8-10 8z" fill="#a426a8"/>'),
     'Rework.com': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQotyMWSOS3zhyfKB3CGgNgoTOVDPn2L_4F-MPI-23ZtmLwByJsbi_q0oU&s=10',
     'Asana': svg('<circle cx="32" cy="17" r="11" fill="#f06a6a"/><circle cx="19" cy="42" r="11" fill="#f06a6a"/><circle cx="45" cy="42" r="11" fill="#f06a6a"/>'),
-    'Monday.com': 'https://images.seeklogo.com/logo-png/39/2/monday-logo-png_seeklogo-394605.png',
+    'Monday.com': svg('<rect width="64" height="64" rx="16" fill="white"/><rect x="11" y="12" width="10" height="40" rx="5" transform="rotate(28 16 32)" fill="#f62b54"/><rect x="27" y="12" width="10" height="40" rx="5" transform="rotate(28 32 32)" fill="#ffcc00"/><circle cx="49" cy="45" r="6.5" fill="#00c875"/>'),
     'Google Workspace': 'https://static.wikia.nocookie.net/logopedia/images/c/c1/Google_Apps_for_Work_icon.png/revision/latest/scale-to-width-down/250?cb=20241121044151',
     'GitHub': 'https://cdn-icons-png.flaticon.com/512/25/25231.png',
     'Codex': 'https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/codex-color.png',
