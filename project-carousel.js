@@ -59,11 +59,29 @@ if (projectCarousel) {
       <a class="button project-carousel__link" href="https://oligarchyservices.com/" target="_blank" rel="noopener noreferrer">Visit Website <span aria-hidden="true">↗</span></a>
     </div>`;
 
+  const secureLoginProject = document.createElement("article");
+  secureLoginProject.className = "project-carousel__item";
+  secureLoginProject.style.backgroundImage = "linear-gradient(100deg,rgba(5,15,35,.9),rgba(10,26,56,.48)),url('assets/custom-secure-login.svg')";
+  secureLoginProject.style.backgroundSize = "cover";
+  secureLoginProject.style.backgroundPosition = "center";
+  secureLoginProject.setAttribute("aria-label", "Custom secure login system project");
+  secureLoginProject.innerHTML = `
+    <div class="project-carousel__content">
+      <p class="project-carousel__eyebrow">Secure client portal</p>
+      <h3 class="project-carousel__title">Custom Secure Login System</h3>
+      <p class="project-carousel__description">A branded, responsive authentication experience built for private client workspaces, controlled account access, and secure organisation-managed sign-in.</p>
+      <div class="project-carousel__tags" aria-label="Project features">
+        <span>Secure Authentication</span><span>Role-Based Access</span><span>Client Portal</span><span>Responsive UI</span><span>Access Requests</span>
+      </div>
+      <p class="project-carousel__description" style="margin-top:14px">Key features include protected login flows, password visibility controls, remembered email preferences, access-request routing, organisation-managed accounts, validation states, and mobile-friendly design.</p>
+    </div>`;
+
   const existingProjects = slide ? [...slide.querySelectorAll(".project-carousel__item")] : [];
   if (slide) {
     slide.insertBefore(eliteAutoProject, existingProjects[1] ?? null);
     slide.insertBefore(optivexProject, existingProjects[2] ?? null);
     slide.insertBefore(oligarchyProject, existingProjects[3] ?? null);
+    slide.insertBefore(secureLoginProject, existingProjects[4] ?? null);
   }
 
   const getItems = () => [...slide.querySelectorAll(".project-carousel__item")];
