@@ -11,72 +11,70 @@ if (projectCarousel) {
   const previousButton = projectCarousel.querySelector("[data-project-carousel-prev]");
   const status = projectCarousel.querySelector("[data-project-carousel-status]");
 
-  const eliteAutoProject = document.createElement("article");
-  eliteAutoProject.className = "project-carousel__item";
-  eliteAutoProject.style.backgroundImage = "url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1800&q=85')";
-  eliteAutoProject.setAttribute("aria-label", "Elite Auto Estimates website project");
-  eliteAutoProject.innerHTML = `
-    <div class="project-carousel__content">
-      <img src="assets/elite-auto-logo.svg" alt="Elite Auto Estimates" style="display:block;width:min(190px,45vw);height:auto;margin:0 0 18px;padding:8px 12px;border-radius:12px;background:rgba(245,241,234,.94);box-shadow:0 10px 28px rgba(0,0,0,.28)">
-      <p class="project-carousel__eyebrow">Automotive appraisal website</p>
-      <h3 class="project-carousel__title">Elite Auto Estimates</h3>
-      <p class="project-carousel__description">A professional website for Colorado auto-damage appraisal services, designed to present services clearly and help customers request assistance online.</p>
-      <div class="project-carousel__tags" aria-label="Project capabilities">
-        <span>Website</span><span>Automotive</span><span>Lead Generation</span><span>Responsive Design</span>
-      </div>
-      <a class="button project-carousel__link" href="https://eliteautoestimates.com/" target="_blank" rel="noopener noreferrer">Visit Website <span aria-hidden="true">↗</span></a>
-    </div>`;
+  const createProject = ({ label, image, content, className = "" }) => {
+    const article = document.createElement("article");
+    article.className = `project-carousel__item ${className}`.trim();
+    article.style.backgroundImage = `url('${image}')`;
+    article.setAttribute("aria-label", label);
+    article.innerHTML = content;
+    return article;
+  };
 
-  const optivexProject = document.createElement("article");
-  optivexProject.className = "project-carousel__item";
-  optivexProject.style.backgroundImage = "url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85')";
-  optivexProject.setAttribute("aria-label", "Optivex Solutions website project");
-  optivexProject.innerHTML = `
-    <div class="project-carousel__content">
-      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop/mv0PQyjGP6Sl0jQx/nav_logo-m5K8W4BJ6ESwRjO3.webp" alt="Optivex Solutions" style="display:block;width:min(210px,48vw);height:auto;margin:0 0 18px;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.96);box-shadow:0 10px 28px rgba(0,0,0,.28)">
-      <p class="project-carousel__eyebrow">Business solutions website</p>
-      <h3 class="project-carousel__title">Optivex Solutions</h3>
-      <p class="project-carousel__description">A responsive business website designed to present Optivex services, strengthen its professional online presence, and provide visitors with a clear path to enquire.</p>
-      <div class="project-carousel__tags" aria-label="Project capabilities">
-        <span>Business Website</span><span>Responsive Design</span><span>Branding</span><span>Lead Generation</span>
-      </div>
-      <a class="button project-carousel__link" href="https://optivex.solutions/" target="_blank" rel="noopener noreferrer">Visit Website <span aria-hidden="true">↗</span></a>
-    </div>`;
+  const eliteAutoProject = createProject({
+    label: "Elite Auto Estimates website project",
+    image: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1800&q=85",
+    content: `
+      <div class="project-carousel__content">
+        <img class="project-carousel__logo project-carousel__logo--light" src="assets/elite-auto-logo.svg" alt="Elite Auto Estimates">
+        <p class="project-carousel__eyebrow">Automotive appraisal website</p>
+        <h3 class="project-carousel__title">Elite Auto Estimates</h3>
+        <p class="project-carousel__description">A professional website for Colorado auto-damage appraisal services, designed to present services clearly and help customers request assistance online.</p>
+        <div class="project-carousel__tags" aria-label="Project capabilities"><span>Website</span><span>Automotive</span><span>Lead Generation</span><span>Responsive Design</span></div>
+        <a class="button project-carousel__link" href="https://eliteautoestimates.com/" target="_blank" rel="noopener noreferrer">Visit Website <span aria-hidden="true">↗</span></a>
+      </div>`
+  });
 
-  const oligarchyProject = document.createElement("article");
-  oligarchyProject.className = "project-carousel__item";
-  oligarchyProject.style.backgroundImage = "url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=85')";
-  oligarchyProject.setAttribute("aria-label", "Oligarchy Services website project");
-  oligarchyProject.innerHTML = `
-    <div class="project-carousel__content">
-      <img src="assets/oligarchy-services-logo.svg" alt="Oligarchy" style="display:block;width:min(250px,55vw);height:auto;margin:0 0 18px;padding:10px 14px;border-radius:12px;background:rgba(10,10,12,.9);box-shadow:0 10px 28px rgba(0,0,0,.32)">
-      <p class="project-carousel__eyebrow">Technology services website</p>
-      <h3 class="project-carousel__title">Oligarchy Services</h3>
-      <p class="project-carousel__description">A professional technology services website presenting digital solutions, managed services, consulting capabilities, and clear client engagement pathways.</p>
-      <div class="project-carousel__tags" aria-label="Project capabilities">
-        <span>Technology Services</span><span>Business Website</span><span>Responsive Design</span><span>Lead Generation</span>
-      </div>
-      <a class="button project-carousel__link" href="https://oligarchyservices.com/" target="_blank" rel="noopener noreferrer">Visit Website <span aria-hidden="true">↗</span></a>
-    </div>`;
+  const optivexProject = createProject({
+    label: "Optivex Solutions website project",
+    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85",
+    content: `
+      <div class="project-carousel__content">
+        <img class="project-carousel__logo project-carousel__logo--light" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop/mv0PQyjGP6Sl0jQx/nav_logo-m5K8W4BJ6ESwRjO3.webp" alt="Optivex Solutions">
+        <p class="project-carousel__eyebrow">Business solutions website</p>
+        <h3 class="project-carousel__title">Optivex Solutions</h3>
+        <p class="project-carousel__description">A responsive business website designed to present Optivex services, strengthen its professional online presence, and provide visitors with a clear path to enquire.</p>
+        <div class="project-carousel__tags" aria-label="Project capabilities"><span>Business Website</span><span>Responsive Design</span><span>Branding</span><span>Lead Generation</span></div>
+        <a class="button project-carousel__link" href="https://optivex.solutions/" target="_blank" rel="noopener noreferrer">Visit Website <span aria-hidden="true">↗</span></a>
+      </div>`
+  });
 
-  const secureLoginProject = document.createElement("article");
-  secureLoginProject.className = "project-carousel__item";
-  secureLoginProject.style.backgroundImage = "url('assets/custom-secure-login.svg')";
-  secureLoginProject.style.backgroundSize = "cover";
-  secureLoginProject.style.backgroundPosition = "center";
-  secureLoginProject.style.backgroundRepeat = "no-repeat";
-  secureLoginProject.style.backgroundColor = "#f7f9fc";
-  secureLoginProject.setAttribute("aria-label", "Custom secure login system project");
-  secureLoginProject.innerHTML = `
-    <div class="project-carousel__content" style="max-width:590px;padding:28px 30px;border:1px solid rgba(255,255,255,.16);border-radius:18px;background:rgba(5,15,35,.88);box-shadow:0 18px 45px rgba(0,0,0,.34);backdrop-filter:blur(8px)">
-      <p class="project-carousel__eyebrow">Secure client portal</p>
-      <h3 class="project-carousel__title">Custom Secure Login System</h3>
-      <p class="project-carousel__description">A branded, responsive authentication experience built for private client workspaces, controlled account access, and secure organisation-managed sign-in.</p>
-      <div class="project-carousel__tags" aria-label="Project features">
-        <span>Secure Authentication</span><span>Role-Based Access</span><span>Client Portal</span><span>Responsive UI</span><span>Access Requests</span>
-      </div>
-      <p class="project-carousel__description" style="margin-top:14px">Key features include protected login flows, password visibility controls, remembered email preferences, access-request routing, organisation-managed accounts, validation states, and mobile-friendly design.</p>
-    </div>`;
+  const oligarchyProject = createProject({
+    label: "Oligarchy Services website project",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=85",
+    content: `
+      <div class="project-carousel__content">
+        <img class="project-carousel__logo project-carousel__logo--dark" src="assets/oligarchy-services-logo.svg" alt="Oligarchy">
+        <p class="project-carousel__eyebrow">Technology services website</p>
+        <h3 class="project-carousel__title">Oligarchy Services</h3>
+        <p class="project-carousel__description">A professional technology services website presenting digital solutions, managed services, consulting capabilities, and clear client engagement pathways.</p>
+        <div class="project-carousel__tags" aria-label="Project capabilities"><span>Technology Services</span><span>Business Website</span><span>Responsive Design</span><span>Lead Generation</span></div>
+        <a class="button project-carousel__link" href="https://oligarchyservices.com/" target="_blank" rel="noopener noreferrer">Visit Website <span aria-hidden="true">↗</span></a>
+      </div>`
+  });
+
+  const secureLoginProject = createProject({
+    label: "Custom secure login system project",
+    image: "assets/custom-secure-login.svg",
+    className: "project-carousel__item--product",
+    content: `
+      <div class="project-carousel__content">
+        <p class="project-carousel__eyebrow">Secure client portal</p>
+        <h3 class="project-carousel__title">Custom Secure Login System</h3>
+        <p class="project-carousel__description">A branded, responsive authentication experience built for private client workspaces, controlled account access, and secure organisation-managed sign-in.</p>
+        <div class="project-carousel__tags" aria-label="Project features"><span>Secure Authentication</span><span>Role-Based Access</span><span>Client Portal</span><span>Responsive UI</span><span>Access Requests</span></div>
+        <div class="project-carousel__metrics" aria-label="Project highlights"><span><strong>5</strong> Core flows</span><span><strong>100%</strong> Responsive</span><span><strong>WCAG</strong> Focus states</span></div>
+      </div>`
+  });
 
   const existingProjects = slide ? [...slide.querySelectorAll(".project-carousel__item")] : [];
   if (slide) {
@@ -88,22 +86,95 @@ if (projectCarousel) {
 
   const getItems = () => [...slide.querySelectorAll(".project-carousel__item")];
 
-  const announceActiveProject = () => {
-    const activeItem = getItems()[1];
+  const chrome = document.createElement("div");
+  chrome.className = "project-carousel__chrome";
+  chrome.innerHTML = `
+    <div class="project-carousel__meta" aria-hidden="true"><span data-carousel-current>01</span><i></i><span data-carousel-total>01</span></div>
+    <div class="project-carousel__dots" role="tablist" aria-label="Choose a featured project"></div>
+    <div class="project-carousel__progress" aria-hidden="true"><span></span></div>`;
+  projectCarousel.appendChild(chrome);
+
+  const dots = chrome.querySelector(".project-carousel__dots");
+  const currentLabel = chrome.querySelector("[data-carousel-current]");
+  const totalLabel = chrome.querySelector("[data-carousel-total]");
+  const progressBar = chrome.querySelector(".project-carousel__progress span");
+
+  if (previousButton) {
+    previousButton.innerHTML = '<span aria-hidden="true">←</span><span class="project-carousel__control-label">Previous</span>';
+    previousButton.setAttribute("title", "Previous project");
+  }
+  if (nextButton) {
+    nextButton.innerHTML = '<span class="project-carousel__control-label">Next</span><span aria-hidden="true">→</span>';
+    nextButton.setAttribute("title", "Next project");
+  }
+
+  const initialItems = getItems();
+  const projectIds = new Map(initialItems.map((item, index) => [item, index]));
+
+  const renderDots = () => {
+    dots.innerHTML = "";
+    initialItems.forEach((item, index) => {
+      const button = document.createElement("button");
+      const title = item.querySelector(".project-carousel__title")?.textContent?.trim() || `Project ${index + 1}`;
+      button.type = "button";
+      button.className = "project-carousel__dot";
+      button.setAttribute("role", "tab");
+      button.setAttribute("aria-label", `Show ${title}`);
+      button.addEventListener("click", () => showProject(item));
+      dots.appendChild(button);
+    });
+  };
+
+  const updateUi = () => {
+    const items = getItems();
+    const activeItem = items[1];
+    const activeIndex = projectIds.get(activeItem) ?? 0;
     const title = activeItem?.querySelector(".project-carousel__title")?.textContent?.trim();
+
+    items.forEach((item, index) => {
+      const isActive = index === 1;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-hidden", String(!isActive));
+      item.querySelectorAll("a, button").forEach((control) => {
+        if (isActive) control.removeAttribute("tabindex");
+        else control.setAttribute("tabindex", "-1");
+      });
+    });
+
+    [...dots.children].forEach((dot, index) => {
+      const isActive = index === activeIndex;
+      dot.classList.toggle("is-active", isActive);
+      dot.setAttribute("aria-selected", String(isActive));
+      dot.tabIndex = isActive ? 0 : -1;
+    });
+
+    const total = initialItems.length;
+    if (currentLabel) currentLabel.textContent = String(activeIndex + 1).padStart(2, "0");
+    if (totalLabel) totalLabel.textContent = String(total).padStart(2, "0");
+    if (progressBar) progressBar.style.transform = `scaleX(${(activeIndex + 1) / total})`;
     if (status && title) status.textContent = `${title} is now displayed.`;
   };
 
   const showNext = () => {
     const items = getItems();
     if (items.length > 1) slide.appendChild(items[0]);
-    announceActiveProject();
+    updateUi();
   };
 
   const showPrevious = () => {
     const items = getItems();
     if (items.length > 1) slide.prepend(items[items.length - 1]);
-    announceActiveProject();
+    updateUi();
+  };
+
+  const showProject = (target) => {
+    let safety = getItems().length + 1;
+    while (getItems()[1] !== target && safety > 0) {
+      const items = getItems();
+      slide.appendChild(items[0]);
+      safety -= 1;
+    }
+    updateUi();
   };
 
   nextButton?.addEventListener("click", showNext);
@@ -113,16 +184,19 @@ if (projectCarousel) {
     if (event.key === "ArrowRight") {
       event.preventDefault();
       showNext();
-    }
-
-    if (event.key === "ArrowLeft") {
+    } else if (event.key === "ArrowLeft") {
       event.preventDefault();
       showPrevious();
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showProject(initialItems[0]);
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showProject(initialItems[initialItems.length - 1]);
     }
   });
 
   let touchStartX = 0;
-
   projectCarousel.addEventListener("touchstart", (event) => {
     touchStartX = event.changedTouches[0]?.clientX ?? 0;
   }, { passive: true });
@@ -130,11 +204,11 @@ if (projectCarousel) {
   projectCarousel.addEventListener("touchend", (event) => {
     const touchEndX = event.changedTouches[0]?.clientX ?? 0;
     const distance = touchEndX - touchStartX;
-
     if (Math.abs(distance) < 45) return;
     if (distance < 0) showNext();
     else showPrevious();
   }, { passive: true });
 
-  announceActiveProject();
+  renderDots();
+  updateUi();
 }
