@@ -14,7 +14,7 @@
     'Rework.com': badge('R', '#ff6b35', '#ff3366'),
     'Asana': svg('<circle cx="32" cy="17" r="11" fill="#f06a6a"/><circle cx="19" cy="42" r="11" fill="#f06a6a"/><circle cx="45" cy="42" r="11" fill="#f06a6a"/>'),
     'Monday.com': svg('<rect x="10" y="12" width="11" height="38" rx="6" fill="#f62b54"/><rect x="27" y="12" width="11" height="28" rx="6" fill="#ffcc00"/><circle cx="49" cy="43" r="7" fill="#00c875"/>'),
-    'Google Workspace': svg('<rect x="9" y="9" width="20" height="20" fill="#4285f4"/><rect x="35" y="9" width="20" height="20" fill="#34a853"/><rect x="9" y="35" width="20" height="20" fill="#fbbc05"/><rect x="35" y="35" width="20" height="20" fill="#ea4335"/>'),
+    'Google Workspace': 'https://static.wikia.nocookie.net/logopedia/images/c/c1/Google_Apps_for_Work_icon.png/revision/latest/scale-to-width-down/250?cb=20241121044151',
     'GitHub': badge('GH', '#111827', '#374151'),
     'Codex': badge('CX', '#111111', '#3f3f46'),
     'Claude': badge('AI', '#c15f3c', '#d4a574'),
