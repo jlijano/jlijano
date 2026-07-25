@@ -6,13 +6,18 @@
   const glideCssUrl = `https://cdn.jsdelivr.net/npm/@glidejs/glide@${GLIDE_VERSION}/dist/css/glide.core.min.css`;
   const glideJsUrl = `https://cdn.jsdelivr.net/npm/@glidejs/glide@${GLIDE_VERSION}/dist/glide.min.js`;
 
-  const loadStylesheet = () => {
-    if (document.querySelector('link[data-glide-core]')) return;
+  const appendStylesheet = (href, dataAttribute) => {
+    if (document.querySelector(`link[${dataAttribute}]`)) return;
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = glideCssUrl;
-    link.dataset.glideCore = 'true';
+    link.href = href;
+    link.setAttribute(dataAttribute, 'true');
     document.head.appendChild(link);
+  };
+
+  const loadStylesheets = () => {
+    appendStylesheet(glideCssUrl, 'data-glide-core');
+    appendStylesheet('clients-carousel.css', 'data-clients-carousel-styles');
   };
 
   const buildCarousel = () => {
@@ -95,7 +100,7 @@
   };
 
   const loadGlide = () => {
-    loadStylesheet();
+    loadStylesheets();
 
     if (window.Glide) {
       buildCarousel();
