@@ -8,6 +8,22 @@ if (projectCarousel) {
   const previousButton = projectCarousel.querySelector("[data-project-carousel-prev]");
   const status = projectCarousel.querySelector("[data-project-carousel-status]");
 
+  const eliteAutoProject = document.createElement("article");
+  eliteAutoProject.className = "project-carousel__item";
+  eliteAutoProject.style.backgroundImage = "url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1800&q=85')";
+  eliteAutoProject.setAttribute("aria-label", "Elite Auto Estimates website project");
+  eliteAutoProject.innerHTML = `
+    <div class="project-carousel__content">
+      <p class="project-carousel__eyebrow">Automotive appraisal website</p>
+      <h3 class="project-carousel__title">Elite Auto Estimates</h3>
+      <p class="project-carousel__description">A professional website for Colorado auto-damage appraisal services, designed to present services clearly and help customers request assistance online.</p>
+      <div class="project-carousel__tags" aria-label="Project capabilities">
+        <span>Website</span><span>Automotive</span><span>Lead Generation</span><span>Responsive Design</span>
+      </div>
+      <a class="button project-carousel__link" href="https://eliteautoestimates.com/" target="_blank" rel="noopener noreferrer">Visit Website <span aria-hidden="true">↗</span></a>
+    </div>`;
+  slide?.appendChild(eliteAutoProject);
+
   const getItems = () => [...slide.querySelectorAll(".project-carousel__item")];
 
   const announceActiveProject = () => {
