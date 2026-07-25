@@ -2,44 +2,41 @@
   const toolsGrid = document.querySelector('.tools-grid');
   if (!toolsGrid) return;
 
-  const badgeLogo = (label, start = '#9346ff', end = '#297dff') =>
-    `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="${start}"/><stop offset="1" stop-color="${end}"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#g)"/><text x="32" y="39" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="20" font-weight="700">${label}</text></svg>`)}`;
+  const svg = (body) => `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">${body}</svg>`)}`;
+  const badge = (text, start, end = start) => svg(`<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="${start}"/><stop offset="1" stop-color="${end}"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#g)"/><text x="32" y="39" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="18" font-weight="700">${text}</text>`);
 
   const logoSources = {
-    'Microsoft 365': 'https://cdn.simpleicons.org/microsoft/5E5E5E',
-    'Microsoft Teams': 'https://cdn.simpleicons.org/microsoftteams/6264A7',
-    'SharePoint': 'https://cdn.simpleicons.org/microsoftsharepoint/038387',
-    'Microsoft Azure': 'https://cdn.simpleicons.org/microsoftazure/0078D4',
-    'Power Platform': 'https://cdn.simpleicons.org/powerautomate/0066FF',
-    'Rework.com': badgeLogo('R', '#ff6b35', '#ff3366'),
-    'Asana': 'https://cdn.simpleicons.org/asana/F06A6A',
-    'Monday.com': 'https://cdn.simpleicons.org/mondaydotcom/FFFFFF',
-    'Google Workspace': 'https://cdn.simpleicons.org/google/4285F4',
-    'GitHub': 'https://cdn.simpleicons.org/github/FFFFFF',
-    'Codex': 'https://cdn.simpleicons.org/openai/FFFFFF',
-    'Claude': 'https://cdn.simpleicons.org/anthropic/D4A574',
-    'ChatGPT': 'https://cdn.simpleicons.org/openai/10A37F',
-    'Hermes': badgeLogo('H', '#7c3aed', '#22d3ee'),
-    'Power BI': 'https://cdn.simpleicons.org/powerbi/F2C811',
-    'Canva': 'https://cdn.simpleicons.org/canva/00C4CC',
-    'Figma': 'https://cdn.simpleicons.org/figma/F24E1E'
+    'Microsoft 365': svg('<rect x="8" y="8" width="20" height="20" fill="#f25022"/><rect x="36" y="8" width="20" height="20" fill="#7fba00"/><rect x="8" y="36" width="20" height="20" fill="#00a4ef"/><rect x="36" y="36" width="20" height="20" fill="#ffb900"/>'),
+    'Microsoft Teams': svg('<rect x="8" y="16" width="34" height="34" rx="8" fill="#6264a7"/><rect x="18" y="24" width="14" height="6" fill="white"/><rect x="22" y="24" width="6" height="20" fill="white"/><circle cx="48" cy="20" r="7" fill="#8b8cc7"/><circle cx="50" cy="40" r="9" fill="#7b83eb"/>'),
+    'SharePoint': svg('<circle cx="25" cy="32" r="21" fill="#038387"/><circle cx="43" cy="22" r="11" fill="#36a9ae"/><circle cx="45" cy="43" r="13" fill="#0b6f73"/><text x="25" y="40" text-anchor="middle" fill="white" font-family="Arial" font-size="24" font-weight="700">S</text>'),
+    'Microsoft Azure': svg('<path d="M10 48 28 10h13L22 50z" fill="#0089d6"/><path d="M34 22 54 50H26z" fill="#0078d4"/><path d="M28 10 38 31 22 50z" fill="#50e6ff"/>'),
+    'Power Platform': svg('<path d="M10 22 27 8l17 14-17 14z" fill="#742774"/><path d="M20 42 37 28l17 14-17 14z" fill="#4f6bed"/><path d="m27 36 10-8 10 8-10 8z" fill="#a426a8"/>'),
+    'Rework.com': badge('R', '#ff6b35', '#ff3366'),
+    'Asana': svg('<circle cx="32" cy="17" r="11" fill="#f06a6a"/><circle cx="19" cy="42" r="11" fill="#f06a6a"/><circle cx="45" cy="42" r="11" fill="#f06a6a"/>'),
+    'Monday.com': svg('<rect x="10" y="12" width="11" height="38" rx="6" fill="#f62b54"/><rect x="27" y="12" width="11" height="28" rx="6" fill="#ffcc00"/><circle cx="49" cy="43" r="7" fill="#00c875"/>'),
+    'Google Workspace': svg('<rect x="9" y="9" width="20" height="20" fill="#4285f4"/><rect x="35" y="9" width="20" height="20" fill="#34a853"/><rect x="9" y="35" width="20" height="20" fill="#fbbc05"/><rect x="35" y="35" width="20" height="20" fill="#ea4335"/>'),
+    'GitHub': badge('GH', '#111827', '#374151'),
+    'Codex': badge('CX', '#111111', '#3f3f46'),
+    'Claude': badge('AI', '#c15f3c', '#d4a574'),
+    'ChatGPT': badge('GPT', '#10a37f', '#0b7f66'),
+    'Hermes': badge('H', '#7c3aed', '#22d3ee'),
+    'Power BI': svg('<rect x="10" y="34" width="8" height="20" rx="4" fill="#f2c811"/><rect x="22" y="24" width="8" height="30" rx="4" fill="#f2c811"/><rect x="34" y="14" width="8" height="40" rx="4" fill="#f2c811"/><rect x="46" y="8" width="8" height="46" rx="4" fill="#d4a900"/>'),
+    'Canva': badge('C', '#00c4cc', '#7d2ae8'),
+    'Figma': svg('<rect x="18" y="6" width="14" height="14" rx="7" fill="#f24e1e"/><rect x="32" y="6" width="14" height="14" rx="7" fill="#ff7262"/><rect x="18" y="20" width="14" height="14" rx="7" fill="#a259ff"/><rect x="32" y="20" width="14" height="14" rx="7" fill="#1abcfe"/><rect x="18" y="34" width="14" height="14" rx="7" fill="#0acf83"/>')
   };
 
   const createToolCard = (markText, name, description) => {
     const card = document.createElement('article');
     card.className = 'tool-card';
-
     const mark = document.createElement('span');
     mark.className = 'tool-mark';
     mark.textContent = markText;
-
     const content = document.createElement('div');
     const title = document.createElement('strong');
     title.textContent = name;
     const breakElement = document.createElement('br');
     const detail = document.createElement('span');
     detail.textContent = description;
-
     content.append(title, breakElement, detail);
     card.append(mark, content);
     return card;
@@ -48,7 +45,6 @@
   [...toolsGrid.querySelectorAll('.tool-card')].forEach((card) => {
     const title = card.querySelector('strong');
     const name = title?.textContent?.trim();
-
     if (name === 'Jira') {
       const mark = card.querySelector('.tool-mark');
       const detail = card.querySelector('div span');
@@ -56,9 +52,7 @@
       if (title) title.textContent = 'Rework.com';
       if (detail) detail.textContent = 'Workflow management';
     }
-
     if (name === 'GLPI') card.remove();
-
     if (name === 'Generative AI Tools') {
       card.replaceWith(
         createToolCard('CX', 'Codex', 'AI-assisted development'),
@@ -84,19 +78,15 @@
     card.classList.add('tools-slide');
     const name = card.querySelector('strong')?.textContent?.trim() || 'Technology tool';
     const mark = card.querySelector('.tool-mark');
-
     if (mark) {
       const image = document.createElement('img');
-      image.src = logoSources[name] || badgeLogo(name.slice(0, 2).toUpperCase());
+      image.src = logoSources[name] || badge(name.slice(0, 2).toUpperCase(), '#9346ff', '#297dff');
       image.width = 58;
       image.height = 58;
-      image.loading = 'lazy';
-      image.decoding = 'async';
       image.alt = '';
       image.setAttribute('aria-hidden', 'true');
       mark.replaceWith(image);
     }
-
     card.setAttribute('aria-label', name);
     if (isClone) {
       card.setAttribute('aria-hidden', 'true');
@@ -107,6 +97,5 @@
 
   originalCards.forEach((card) => track.appendChild(prepareCard(card)));
   originalCards.forEach((card) => track.appendChild(prepareCard(card.cloneNode(true), true)));
-
   toolsGrid.replaceChildren(track);
 })();
