@@ -62,26 +62,11 @@ if (projectCarousel) {
       </div>`
   });
 
-  const secureLoginProject = createProject({
-    label: "Custom secure login system project",
-    image: "assets/custom-secure-login.svg",
-    className: "project-carousel__item--product",
-    content: `
-      <div class="project-carousel__content">
-        <p class="project-carousel__eyebrow">Secure client portal</p>
-        <h3 class="project-carousel__title">Custom Secure Login System</h3>
-        <p class="project-carousel__description">A branded, responsive authentication experience built for private client workspaces, controlled account access, and secure organisation-managed sign-in.</p>
-        <div class="project-carousel__tags" aria-label="Project features"><span>Secure Authentication</span><span>Role-Based Access</span><span>Client Portal</span><span>Responsive UI</span><span>Access Requests</span></div>
-        <div class="project-carousel__metrics" aria-label="Project highlights"><span><strong>5</strong> Core flows</span><span><strong>100%</strong> Responsive</span><span><strong>WCAG</strong> Focus states</span></div>
-      </div>`
-  });
-
   const existingProjects = slide ? [...slide.querySelectorAll(".project-carousel__item")] : [];
   if (slide) {
     slide.insertBefore(eliteAutoProject, existingProjects[1] ?? null);
     slide.insertBefore(optivexProject, existingProjects[2] ?? null);
     slide.insertBefore(oligarchyProject, existingProjects[3] ?? null);
-    slide.insertBefore(secureLoginProject, existingProjects[4] ?? null);
   }
 
   const getItems = () => [...slide.querySelectorAll(".project-carousel__item")];
