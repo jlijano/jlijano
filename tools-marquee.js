@@ -2,19 +2,24 @@
   const toolsGrid = document.querySelector('.tools-grid');
   if (!toolsGrid) return;
 
+  const badgeLogo = (label, start = '#9346ff', end = '#297dff') =>
+    `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="${start}"/><stop offset="1" stop-color="${end}"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#g)"/><text x="32" y="39" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="20" font-weight="700">${label}</text></svg>`)}`;
+
   const logoSources = {
     'Microsoft 365': 'https://cdn.simpleicons.org/microsoft/5E5E5E',
     'Microsoft Teams': 'https://cdn.simpleicons.org/microsoftteams/6264A7',
     'SharePoint': 'https://cdn.simpleicons.org/microsoftsharepoint/038387',
     'Microsoft Azure': 'https://cdn.simpleicons.org/microsoftazure/0078D4',
     'Power Platform': 'https://cdn.simpleicons.org/powerautomate/0066FF',
-    'Jira': 'https://cdn.simpleicons.org/jira/0052CC',
+    'Rework.com': badgeLogo('R', '#ff6b35', '#ff3366'),
     'Asana': 'https://cdn.simpleicons.org/asana/F06A6A',
     'Monday.com': 'https://cdn.simpleicons.org/mondaydotcom/FFFFFF',
-    'GLPI': 'https://cdn.simpleicons.org/glpi/FFFFFF',
     'Google Workspace': 'https://cdn.simpleicons.org/google/4285F4',
     'GitHub': 'https://cdn.simpleicons.org/github/FFFFFF',
-    'Generative AI Tools': 'https://cdn.simpleicons.org/openai/FFFFFF',
+    'Codex': 'https://cdn.simpleicons.org/openai/FFFFFF',
+    'Claude': 'https://cdn.simpleicons.org/anthropic/D4A574',
+    'ChatGPT': 'https://cdn.simpleicons.org/openai/10A37F',
+    'Hermes': badgeLogo('H', '#7c3aed', '#22d3ee'),
     'Power BI': 'https://cdn.simpleicons.org/powerbi/F2C811',
     'Canva': 'https://cdn.simpleicons.org/canva/00C4CC',
     'Figma': 'https://cdn.simpleicons.org/figma/F24E1E'
@@ -38,7 +43,7 @@
 
     if (mark) {
       const image = document.createElement('img');
-      image.src = logoSources[name] || `https://cdn.simpleicons.org/${name.toLowerCase().replace(/[^a-z0-9]/g, '')}/FFFFFF`;
+      image.src = logoSources[name] || badgeLogo(name.slice(0, 2).toUpperCase());
       image.width = 58;
       image.height = 58;
       image.loading = 'lazy';
