@@ -52,7 +52,7 @@ const featuredProjects = [
     description: "A branded, responsive authentication experience built for private client workspaces, controlled account access, and secure organisation-managed sign-in.",
     secondaryDescription: "Key features include protected login flows, password visibility controls, remembered email preferences, access-request routing, organisation-managed accounts, validation states, and mobile-friendly design.",
     tags: ["Secure Authentication", "Role-Based Access", "Client Portal", "Responsive UI", "Access Requests"],
-    background: "assets/custom-secure-login.svg",
+    background: "assets/secure-client-portal-preview.svg",
     ctaLabel: "Discuss This Project",
     ctaUrl: "#contact"
   },
