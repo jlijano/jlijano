@@ -1,6 +1,9 @@
 "use strict";
 
 const projectCarousel = document.querySelector("[data-project-carousel]");
+const projectsSectionTitle = document.querySelector("#projects-title");
+
+if (projectsSectionTitle) projectsSectionTitle.textContent = "Featured Projects";
 
 if (projectCarousel) {
   const slide = projectCarousel.querySelector("[data-project-carousel-slide]");
