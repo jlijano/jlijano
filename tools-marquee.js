@@ -21,7 +21,7 @@
     'ChatGPT': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/ChatGPT-Logo.svg/960px-ChatGPT-Logo.svg.png?_=20240214002031',
     'Hermes': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjcJ9P4EkbG4tU5ST2QOFarrM-i5e5DIbFT_27yBn1Jw&s=10',
     'Power BI': svg('<rect x="10" y="34" width="8" height="20" rx="4" fill="#f2c811"/><rect x="22" y="24" width="8" height="30" rx="4" fill="#f2c811"/><rect x="34" y="14" width="8" height="40" rx="4" fill="#f2c811"/><rect x="46" y="8" width="8" height="46" rx="4" fill="#d4a900"/>'),
-    'Canva': badge('C', '#00c4cc', '#7d2ae8'),
+    'Canva': svg('<defs><linearGradient id="canva" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00c4cc"/><stop offset="1" stop-color="#7d2ae8"/></linearGradient></defs><circle cx="32" cy="32" r="29" fill="url(#canva)"/><text x="32" y="39" text-anchor="middle" fill="white" font-family="cursive" font-size="22" font-weight="700" font-style="italic">Canva</text>'),
     'Figma': svg('<rect x="18" y="6" width="14" height="14" rx="7" fill="#f24e1e"/><rect x="32" y="6" width="14" height="14" rx="7" fill="#ff7262"/><rect x="18" y="20" width="14" height="14" rx="7" fill="#a259ff"/><rect x="32" y="20" width="14" height="14" rx="7" fill="#1abcfe"/><rect x="18" y="34" width="14" height="14" rx="7" fill="#0acf83"/>')
   };
 
