@@ -14,6 +14,7 @@ if (projectCarousel) {
   eliteAutoProject.setAttribute("aria-label", "Elite Auto Estimates website project");
   eliteAutoProject.innerHTML = `
     <div class="project-carousel__content">
+      <img src="assets/elite-auto-logo.svg" alt="Elite Auto Estimates" style="display:block;width:min(190px,45vw);height:auto;margin:0 0 18px;padding:8px 12px;border-radius:12px;background:rgba(245,241,234,.94);box-shadow:0 10px 28px rgba(0,0,0,.28)">
       <p class="project-carousel__eyebrow">Automotive appraisal website</p>
       <h3 class="project-carousel__title">Elite Auto Estimates</h3>
       <p class="project-carousel__description">A professional website for Colorado auto-damage appraisal services, designed to present services clearly and help customers request assistance online.</p>
