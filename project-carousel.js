@@ -22,7 +22,9 @@ if (projectCarousel) {
       </div>
       <a class="button project-carousel__link" href="https://eliteautoestimates.com/" target="_blank" rel="noopener noreferrer">Visit Website <span aria-hidden="true">↗</span></a>
     </div>`;
-  slide?.appendChild(eliteAutoProject);
+
+  const existingProjects = slide ? [...slide.querySelectorAll(".project-carousel__item")] : [];
+  if (slide) slide.insertBefore(eliteAutoProject, existingProjects[1] ?? null);
 
   const getItems = () => [...slide.querySelectorAll(".project-carousel__item")];
 
