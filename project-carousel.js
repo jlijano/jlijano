@@ -33,7 +33,7 @@ if (projectCarousel) {
   optivexProject.setAttribute("aria-label", "Optivex Solutions website project");
   optivexProject.innerHTML = `
     <div class="project-carousel__content">
-      <img src="assets/optivex-logo.svg" alt="Optivex" style="display:block;width:min(210px,48vw);height:auto;margin:0 0 18px;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.96);box-shadow:0 10px 28px rgba(0,0,0,.28)">
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop/mv0PQyjGP6Sl0jQx/nav_logo-m5K8W4BJ6ESwRjO3.webp" alt="Optivex Solutions" style="display:block;width:min(210px,48vw);height:auto;margin:0 0 18px;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.96);box-shadow:0 10px 28px rgba(0,0,0,.28)">
       <p class="project-carousel__eyebrow">Business solutions website</p>
       <h3 class="project-carousel__title">Optivex Solutions</h3>
       <p class="project-carousel__description">A responsive business website designed to present Optivex services, strengthen its professional online presence, and provide visitors with a clear path to enquire.</p>
