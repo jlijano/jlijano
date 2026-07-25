@@ -43,10 +43,27 @@ if (projectCarousel) {
       <a class="button project-carousel__link" href="https://optivex.solutions/" target="_blank" rel="noopener noreferrer">Visit Website <span aria-hidden="true">↗</span></a>
     </div>`;
 
+  const oligarchyProject = document.createElement("article");
+  oligarchyProject.className = "project-carousel__item";
+  oligarchyProject.style.backgroundImage = "url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=85')";
+  oligarchyProject.setAttribute("aria-label", "Oligarchy Services website project");
+  oligarchyProject.innerHTML = `
+    <div class="project-carousel__content">
+      <img src="assets/oligarchy-services-logo.svg" alt="Oligarchy" style="display:block;width:min(250px,55vw);height:auto;margin:0 0 18px;padding:10px 14px;border-radius:12px;background:rgba(10,10,12,.9);box-shadow:0 10px 28px rgba(0,0,0,.32)">
+      <p class="project-carousel__eyebrow">Technology services website</p>
+      <h3 class="project-carousel__title">Oligarchy Services</h3>
+      <p class="project-carousel__description">A professional technology services website presenting digital solutions, managed services, consulting capabilities, and clear client engagement pathways.</p>
+      <div class="project-carousel__tags" aria-label="Project capabilities">
+        <span>Technology Services</span><span>Business Website</span><span>Responsive Design</span><span>Lead Generation</span>
+      </div>
+      <a class="button project-carousel__link" href="https://oligarchyservices.com/" target="_blank" rel="noopener noreferrer">Visit Website <span aria-hidden="true">↗</span></a>
+    </div>`;
+
   const existingProjects = slide ? [...slide.querySelectorAll(".project-carousel__item")] : [];
   if (slide) {
     slide.insertBefore(eliteAutoProject, existingProjects[1] ?? null);
     slide.insertBefore(optivexProject, existingProjects[2] ?? null);
+    slide.insertBefore(oligarchyProject, existingProjects[3] ?? null);
   }
 
   const getItems = () => [...slide.querySelectorAll(".project-carousel__item")];
