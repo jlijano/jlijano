@@ -11,7 +11,7 @@
     'SharePoint': svg('<circle cx="25" cy="32" r="21" fill="#038387"/><circle cx="43" cy="22" r="11" fill="#36a9ae"/><circle cx="45" cy="43" r="13" fill="#0b6f73"/><text x="25" y="40" text-anchor="middle" fill="white" font-family="Arial" font-size="24" font-weight="700">S</text>'),
     'Microsoft Azure': svg('<path d="M10 48 28 10h13L22 50z" fill="#0089d6"/><path d="M34 22 54 50H26z" fill="#0078d4"/><path d="M28 10 38 31 22 50z" fill="#50e6ff"/>'),
     'Power Platform': svg('<path d="M10 22 27 8l17 14-17 14z" fill="#742774"/><path d="M20 42 37 28l17 14-17 14z" fill="#4f6bed"/><path d="m27 36 10-8 10 8-10 8z" fill="#a426a8"/>'),
-    'Rework.com': badge('R', '#ff6b35', '#ff3366'),
+    'Rework.com': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQotyMWSOS3zhyfKB3CGgNgoTOVDPn2L_4F-MPI-23ZtmLwByJsbi_q0oU&s=10',
     'Asana': svg('<circle cx="32" cy="17" r="11" fill="#f06a6a"/><circle cx="19" cy="42" r="11" fill="#f06a6a"/><circle cx="45" cy="42" r="11" fill="#f06a6a"/>'),
     'Monday.com': svg('<rect x="10" y="12" width="11" height="38" rx="6" fill="#f62b54"/><rect x="27" y="12" width="11" height="28" rx="6" fill="#ffcc00"/><circle cx="49" cy="43" r="7" fill="#00c875"/>'),
     'Google Workspace': 'https://static.wikia.nocookie.net/logopedia/images/c/c1/Google_Apps_for_Work_icon.png/revision/latest/scale-to-width-down/250?cb=20241121044151',
